@@ -11,6 +11,7 @@ public class Interfaz1 extends JFrame{
     JTable tabla;
     JScrollPane scpane101;
     DefaultTableModel modelo;
+    
 
     public Interfaz1(){
         setTitle("Informe 1");
@@ -37,9 +38,14 @@ public class Interfaz1 extends JFrame{
         //String[][] Datos={{"", "", "", ""},{"", "", "", ""}};
         modelo = new DefaultTableModel(Datos, columnas);
         tabla = new JTable(modelo);
+        tabla.setSelectionBackground(Color.GRAY);
+        tabla.setShowHorizontalLines(true);
+        tabla.setShowVerticalLines(true);
+        
         
         scpane101 = new JScrollPane(tabla);
         scpane101.setBounds(20, 20, 460, 740);
+        
         
         add(scpane101);
         add(panelg);

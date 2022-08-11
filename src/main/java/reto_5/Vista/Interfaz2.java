@@ -37,6 +37,9 @@ public class Interfaz2 extends JFrame {
         //String[][] Datos={{"","","",""},{"","","",""}};
         modelo=new DefaultTableModel(Datos,columnas);
         tabla=new JTable(modelo);
+        tabla.setSelectionBackground(Color.GRAY);
+        tabla.setShowHorizontalLines(true);
+        tabla.setShowVerticalLines(true);
 
         scpanel01=new JScrollPane(tabla);
         scpanel01.setBounds(20,20,460,250);
